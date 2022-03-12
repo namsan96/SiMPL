@@ -1,0 +1,487 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<!-- ======================================================================= -->
+<script src="http://www.google.com/jsapi" type="text/javascript"></script>
+<script type="text/javascript">google.load("jquery", "1.3.2");</script>
+<style type="text/css">
+  body {
+    font-family: "Titillium Web","HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight:300;
+    font-size:18px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  h1 {
+    font-weight:300;
+  }
+
+  div {
+    max-width: 95%;
+    margin:auto;
+    padding: 10px;
+  }
+
+  .table-like {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  .disclaimerbox {
+    background-color: #eee;
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+    padding: 20px;
+  }
+
+  video.header-vid {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img {
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-height: 100%;
+    max-width: 100%;
+  }
+
+  iframe {
+    max-width: 100%;
+  }
+
+  img.header-img {
+    height: 140px;
+    border: 1px solid black;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  img.rounded {
+    border: 1px solid #eeeeee;
+    border-radius: 10px ;
+    -moz-border-radius: 10px ;
+    -webkit-border-radius: 10px ;
+  }
+
+  pre {
+    background: #f4f4f4;
+    border: 1px solid #ddd;
+    color: #666;
+    page-break-inside: avoid;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 1.6em;
+    max-width: 100%;
+    overflow: auto;
+    padding: 10px;
+    display: block;
+    word-wrap: break-word;
+}
+
+  a:link,a:visited
+  {
+    color: #1367a7;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #208799;
+  }
+
+  td.dl-link {
+    height: 160px;
+    text-align: center;
+    font-size: 22px;
+  }
+
+  .layered-paper-big { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35), /* The third layer shadow */
+            15px 15px 0 0px #fff, /* The fourth layer */
+            15px 15px 1px 1px rgba(0,0,0,0.35), /* The fourth layer shadow */
+            20px 20px 0 0px #fff, /* The fifth layer */
+            20px 20px 1px 1px rgba(0,0,0,0.35), /* The fifth layer shadow */
+            25px 25px 0 0px #fff, /* The fifth layer */
+            25px 25px 1px 1px rgba(0,0,0,0.35); /* The fifth layer shadow */
+    margin-left: 10px;
+    margin-right: 45px;
+  }
+
+
+  .layered-paper { /* modified from: http://css-tricks.com/snippets/css/layered-paper/ */
+    box-shadow:
+            0px 0px 1px 1px rgba(0,0,0,0.35), /* The top layer shadow */
+            5px 5px 0 0px #fff, /* The second layer */
+            5px 5px 1px 1px rgba(0,0,0,0.35), /* The second layer shadow */
+            10px 10px 0 0px #fff, /* The third layer */
+            10px 10px 1px 1px rgba(0,0,0,0.35); /* The third layer shadow */
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 30px;
+    margin-bottom: 5px;
+  }
+
+  .vert-cent {
+    position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+  }
+
+  hr
+  {
+    border: 0;
+    height: 1px;
+    max-width: 1100px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  }
+
+  #authors td {
+    padding-bottom:5px;
+    padding-top:30px;
+  }
+</style>
+<!-- ======================================================================= -->
+
+<!-- Start : Google Analytics Code -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-64069893-4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-64069893-4');
+</script> -->
+<!-- End : Google Analytics Code -->
+
+<script type="text/javascript" src="resources/hidebib.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+<head>
+<div max-width=100%>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="icon" type="image/png" href="resources/clvr_icon.png">
+  <title>Skill-Based Meta Reinforcement Learning</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://kpertsch.github.io/" />
+  <meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <meta property="og:site_name" content="Skill-Based Meta-Policy Learning" />
+  <meta property="og:type" content="video.other" />
+  <meta property="og:title" content="Skill-Based Meta-Reinforcement Learning" />
+  <meta property="og:description" content="Taewook Nam, Shao-Hua Sun, Karl Pertsch, Sung Ju Hwang, Joseph J. Lim. Skill-Based Meta-Reinforcement Learning. ICLR 2022." />
+  <meta property="og:url" content="https://kpertsch.github.io/" />
+  <meta property="og:image" content="https://github.com/clvrai/spirl/docs/resources/spirl_teaser.png" />  <!-- UPDATE -->
+  <!--<meta property="og:video" content="https://www.youtube.com/v/axXx-x86IeY" />   &lt;!&ndash; UPDATE &ndash;&gt;-->
+
+  <meta property="article:publisher" content="https://kpertsch.github.io/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Skill-Based Meta-Reinforcement Learning" />
+  <meta name="twitter:description" content="Taewook Nam, Shao-Hua Sun, Karl Pertsch, Sung Ju Hwang, Joseph J. Lim. Skill-Based Meta-Reinforcement Learning. ICLR 2022." />
+  <meta name="twitter:url" content="https://kpertsch.github.io/" />
+  <meta name="twitter:image" content="https://github.com/clvrai/spirl/docs/resources/spirl_teaser.png" />   <!-- UPDATE -->
+  <meta property="og:image:width" content="3902" />
+  <meta property="og:image:height" content="1337" />
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <meta name="twitter:card" content="player" />
+  <meta name="twitter:image" content="https://github.com/clvrai/spirl/docs/resources/spirl_teaser.png" />   <!-- UPDATE -->
+  <!--<meta name="twitter:player" content="https://www.youtube.com/embed/axXx-x86IeY?rel=0&showinfo=0" />   &lt;!&ndash; UPDATE &ndash;&gt;-->
+  <meta name="twitter:player:width" content="640" />
+  <meta name="twitter:player:height" content="360" />
+</head>
+
+<body>
+
+      <br>
+      <center><span style="font-size:44px;font-weight:bold;">Skill-Based Meta-Reinforcement Learning</span></center><br/>
+      <div class="table-like" style="justify-content:space-evenly;max-width:1000px;margin:auto;">
+          <div><center><span style="font-size:25px"><a href="https://kpertsch.github.io/" target="_blank">Taewook Nam<sup>1</sup></a></span></center>
+          <!-- <center><span style="font-size:18px">USC</span></center> -->
+          </div>
+
+          <div><center><span style="font-size:25px"><a href="https://shaohua0116.github.io/" target="_blank">Shao-Hua Sun<sup>2</sup></a></span></center>
+          <!-- <center><span style="font-size:18px">USC</span></center> -->
+          </div>
+
+          <div><center><span style="font-size:25px"><a href="https://kpertsch.github.io/" target="_blank">Karl Pertsch<sup>2</sup></a></span></center>
+          <!-- <center><span style="font-size:18px">USC</span></center> -->
+          </div>
+
+          <div><center><span style="font-size:25px"><a href="http://www.sungjuhwang.com/" target="_blank">Sung Ju Hwang<sup>1</sup></a></span></center>
+          <!-- <center><span style="font-size:18px">UPenn</span></center>-->          
+          </div>
+
+          <div><center><span style="font-size:25px"><a href="https://www.clvrai.com/" target="_blank">Joseph J. Lim<sup>1,2</sup></a></span></center>
+          <!-- <center><span style="font-size:18px">UC Berkeley</span></center> -->
+          </div>
+      </div>
+      <table align=center width=30% style="padding-top:0px;padding-bottom:0px">
+          <tr>
+            <td align=center><center><span style="font-size:20px"><sup>1</sup> KAIST,    <sup>2</sup> University of Southern California</span></center></td>
+          <tr/>
+      </table>
+      <center><span style="font-size:20px;">International Conference on Learning Representations (ICLR), 2022</span></center>
+
+      <div class="table-like" style="justify-content:space-evenly;max-width:500px;margin:auto;padding:5px">
+        <div><center><span style="font-size:28px"><a href="https://arxiv.org/abs/2010.11944">[Paper]</a></span></center></div>  <!-- UPDATE -->
+        <div><center><span style="font-size:28px"><a href='https://github.com/clvrai/spirl'>[GitHub Code]</a></span></center> </div>   <!-- UPDATE -->
+        <!-- <div><center><span style="font-size:28px"><a href='https://youtu.be/w32twGTWvDU'>[Talk (5 min)]</a></span></center> </div> -->
+      </div>
+
+      <!-- ### VIDEO ### -->
+      <!-- <center>
+      <iframe width="768" height="432" max-width="100%" src="https://www.youtube.com/embed/axXx-x86IeY?autoplay=1&loop=1&playlist=axXx-x86IeY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center> -->
+      <!-- <iframe width="768" height="432" max-width="100%" src="resources/video.m4v" frameborder="0" allowfullscreen></iframe></center> -->
+      <!-- <br> -->
+
+      <br/>
+          <center><img src = "resources/teaser.png" width="1000px"></img><br></center>
+      <br/>
+
+      <div style="width:800px; margin:0 auto;padding:5px" align="justify">
+        We devise a method that enables meta-learning on long-horizon, sparse-reward tasks, allowing us to solve unseen target tasks with orders of magnitude fewer environment interactions. Our core idea is to leverage prior experience extracted from offline datasets during meta-learning. Specifically, we propose to (1) extract reusable skills and a skill prior from offline datasets, (2) meta-train a high-level policy that learns to efficiently compose learned skills into long-horizon behaviors, and (3) rapidly adapt the meta-trained policy to solve an unseen target task. Experimental results on continuous control tasks in navigation and manipulation demonstrate that the proposed method can efficiently solve long-horizon novel target tasks by combining the strengths of meta-learning and the usage of offline datasets, while prior approaches in RL, meta-RL, and multi-task RL require substantially more environment interactions to solve the tasks.
+      </div>
+      <br><hr>
+
+
+      <!-- ################### OVERVIEW #################### -->
+
+      <center><h1>Overview</h1></center>
+      <div style="width:800px; margin:0 auto;padding:5px" align="justify">
+        We aim to enable meta-RL on long-horzion, sparse reward tasks by leveraging prior experience in the form of offline experience. Below we describe the three stages of our algorithm.
+      </div>
+
+      <br> <center><img src = "resources/model.png" width="1000px"></img></center>
+
+      <div style="width:800px; margin:0 auto;padding:5px" align="justify">
+        <h2>1. Skill Extraction</h2>
+        <div style="width:800px; margin:0 auto;padding:0px" align="justify">
+          We learn a set of reusable skills from the offline dataset using the skill extraction approach proposed in <a href="https://www.clvrai.com/" target="_blank">Pertsch et al. (SPiRL)</a>. We jointly train (1) a skill encoder q(z | s, a) that embeds a K-steps trajectory randomly cropped from the sequences in the offline dataset into a low-dimensional skill embedding z, and (2) a low-level skill policy &pi;(a | s, z) that is trained with behavioral cloning to reproduce the action sequence given the skill embedding. 
+        </div>
+
+        <h2>2. Skill-Based Meta Training</h2>
+        <div style="width:800px; margin:0 auto;padding:0px" align="justify">
+          We propose a skill-based off-policy meta-RL algorithm, based on <a href="https://arxiv.org/abs/1903.08254">PEARL (Rakelly et al.)</a>. On a set of meta-training tasks we train a task-encoder that takes in a set of sampled transitions and produces a task embedding. We then leverage our learned skills by training a task-embedding-conditioned policy over skills instead of primitive actions: &pi;(z | s, e), thus equipping the policy with a set of useful pre-trained behaviors and reducing the meta-training task to learning how to combine these behaviors instead of learning them from scratch.
+        </div>
+
+        <h2>3. Target Task Learning</h2>
+        <div style="width:800px; margin:0 auto;padding:5px" align="justify">
+          We rapidly adapt the meta-trained policy on the target task by rolling out the policy and collecting a small set of conditioning transitions. We encode this set of transitions into a target task embedding and condition our meta-trained high-level policy on this encoding. This allows it to very quickly narrow its skill distribution to those skills that solve the task. To further improve the performance on the target task, we can fine-tune the conditioned policy with target task rewards.
+        </div>
+      </div><br>
+    <hr>
+
+    <!-- ################### ENVIRONMENTS #################### -->
+
+    <center><h1>Environments</h1></center>
+    <center><img src = "resources/env_fig.png" width="1000px"></img></center><br>
+    <div style="width:800px; margin:0 auto;padding:5px" align="justify">
+      We evaluate our proposed framework in two domains that require the learning of complex, long-horizon behaviors from sparse rewards. These environments are substantially more complex than those typically used to evaluate meta-RL algorithms. 
+        <b>(a) Maze Navigation</b>: The agent needs to navigate for hundreds of steps to reach unseen target goals and only receives a binary reward upon task success.
+        <b>(b) Kitchen Manipulation</b>: The 7DoF agent needs to execute an unseen sequence of four subtasks, spanning hundreds of time steps, and only receives a sparse reward upon completion of each subtask.
+    </div><br>
+    <hr>
+
+    <!-- ################### QUALITATIVE RESULTS #################### -->
+    <center><h1>Rapid Target Task Learning</h1></center>
+
+    <div style="width:800px; margin:0 auto;padding:5px" align="justify">
+      Our approach, SiMPL (Skill-based Meta-Policy Learning), rapidly converges on the target task. In contrast, prior works that use pre-trained skills (SPiRL) or multi-task RL on the training tasks explore well but fail to converge quickly on the target task. Prior meta-RL approaches that do not leverage pre-trained skills (PEARL) struggle to solve the long-horizon, sparse reward tasks even during meta-training and thus fail on the target tasks.
+    </div>
+    
+    <center><h2>Maze Navigation</h2></center>
+    <center><img src = "resources/maze_qual.png" width="1000px"></img></center><br>
+
+    <center><h2>Kitchen Manipulation</h2></center>
+    <table align=center width=1000px>
+        <tr>
+        <td style="width:1%">
+          <center><div style="font-size:25px;">
+          SiMPL (Ours)
+          </div></center>
+        </td>
+
+        <!-- ################### EP 0 #################### -->
+        <td style="width:2%"></td>
+        <td style="width:30%">
+          <center><h2>Episode 0</h2></center>
+          <a href="resources/policy_videos/ours.mp4"><video src = "resources/policy_videos/ours.mp4" width="100%" autoplay muted loop></video></a>
+          <br>
+        </td>
+
+        <!-- ################### EP 20 #################### -->
+        <td style="width:2%"></td>
+        <td style="width:30%">
+          <center><h2>Episode 20</h2></center>
+          <a href="resources/policy_videos/ours.mp4"><video src = "resources/policy_videos/ours.mp4" width="100%" autoplay muted loop></video></a>
+          <br>
+        </td>
+
+        <!-- ################### EP 100 #################### -->
+        <td style="width:2%"></td>
+        <td style="width:30%">
+          <center><h2>Episode 100</h2></center>
+          <a href="resources/policy_videos/ours.mp4"><video src = "resources/policy_videos/ours.mp4" width="100%" autoplay muted loop></video></a>
+          <br>
+        </td>
+        </tr>
+
+        <tr>
+        <td style="width:1%">
+          <center><div style="font-size:25px">
+          SPiRL
+          </div></center>
+        </td>
+
+        <!-- ################### EP 0 #################### -->
+        <td style="width:2%"></td>
+        <td style="width:30%">
+          <a href="resources/policy_videos/ours.mp4"><video src = "resources/policy_videos/ours.mp4" width="100%" autoplay muted loop></video></a>
+          <br>
+        </td>
+
+        <!-- ################### EP 20 #################### -->
+        <td style="width:2%"></td>
+        <td style="width:30%">
+          <a href="resources/policy_videos/ours.mp4"><video src = "resources/policy_videos/ours.mp4" width="100%" autoplay muted loop></video></a>
+          <br>
+        </td>
+
+        <!-- ################### EP 100 #################### -->
+        <td style="width:2%"></td>
+        <td style="width:30%">
+          <a href="resources/policy_videos/ours.mp4"><video src = "resources/policy_videos/ours.mp4" width="100%" autoplay muted loop></video></a>
+          <br>
+        </td>
+        </tr>
+
+        <tr>
+        <td style="width:1%">
+          <center><div style="font-size:25px">
+          MTRL
+          </div></center>
+        </td>
+
+        <!-- ################### EP 0 #################### -->
+        <td style="width:2%"></td>
+        <td style="width:30%">
+          <a href="resources/policy_videos/ours.mp4"><video src = "resources/policy_videos/ours.mp4" width="100%" autoplay muted loop></video></a>
+          <br>
+        </td>
+
+        <!-- ################### EP 20 #################### -->
+        <td style="width:2%"></td>
+        <td style="width:30%">
+          <a href="resources/policy_videos/ours.mp4"><video src = "resources/policy_videos/ours.mp4" width="100%" autoplay muted loop></video></a>
+          <br>
+        </td>
+
+        <!-- ################### EP 100 #################### -->
+        <td style="width:2%"></td>
+        <td style="width:30%">
+          <a href="resources/policy_videos/ours.mp4"><video src = "resources/policy_videos/ours.mp4" width="100%" autoplay muted loop></video></a>
+          <br>
+        </td>
+        </tr>
+
+        <tr>
+        <td style="width:1%">
+          <center><div style="font-size:25px">
+          PEARL-ft
+          </div></center>
+        </td>
+
+        <!-- ################### EP 0 #################### -->
+        <td style="width:2%"></td>
+        <td style="width:30%">
+          <a href="resources/policy_videos/ours.mp4"><video src = "resources/policy_videos/ours.mp4" width="100%" autoplay muted loop></video></a>
+          <br>
+        </td>
+
+        <!-- ################### EP 20 #################### -->
+        <td style="width:2%"></td>
+        <td style="width:30%">
+          <a href="resources/policy_videos/ours.mp4"><video src = "resources/policy_videos/ours.mp4" width="100%" autoplay muted loop></video></a>
+          <br>
+        </td>
+
+        <!-- ################### EP 100 #################### -->
+        <td style="width:2%"></td>
+        <td style="width:30%">
+          <a href="resources/policy_videos/ours.mp4"><video src = "resources/policy_videos/ours.mp4" width="100%" autoplay muted loop></video></a>
+          <br>
+        </td>
+        </tr>
+
+        </table><br>
+      <hr>
+
+
+      <!-- ################### EXPLORATION #################### -->
+
+      <div style="width:800px; margin:0 auto; text-align=center">
+        <center><h1>Quantiative Results</h1></center>
+      </div>
+      <br/>
+          <center><a href="resources/quant_results.png"><img src = "resources/quant_results.png" width="1000px"></img></a><br></center>
+      <br/><hr>
+
+      <!-- ################### CODE #################### -->
+      <center id="sourceCode"><h1>Source Code</h1></center>
+      <div style="width:800px; margin:0 auto; text-align=right">
+      We have released our implementation in PyTorch on the github page. Check it out!
+      </div>
+      <div class="table-like">
+        <span style="font-size:28px"><a href='https://github.com/clvrai/spirl'>[GitHub]</a></span>   <!-- UPDATE -->
+      </div>
+      <br><hr>
+
+      <!-- ################### CITATION #################### -->
+      <table align=center width=1000px>
+        <center><h1>Citation</h1></center>
+        <tr>
+        <td width=100%>
+        <pre><code style="display:block; white-space:pre-wrap">
+          @inproceedings{nam2022simpl,
+            title={Skill-based Meta-Reinforcement Learning},
+            author={Taewook Nam and Shao-Hua Sun and Karl Pertsch and Sung Ju Hwang and Joseph J. Lim},
+            booktitle={International Conference on Learning Representations (ICLR)},
+            year={2022},
+          }
+        </code></pre>
+          </td>
+          </tr>
+      </table>
+    <br><hr>
+
+
+      <!-- <div style="width:800px; margin:0 auto; text-align=center">
+        <br>
+        <center>Code and full paper to be released soon.</center>
+      </div> -->
+      </table>
+
+<script xml:space="preserve" language="JavaScript">
+hideallbibs();
+</script>
+</div>
+</body>
+</html>
