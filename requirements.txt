@@ -1,0 +1,6 @@
+numpy
+mujoco_py
+gym
+matplotlib==3.4.3
+pytorch==1.10.2
+
