@@ -1,6 +1,9 @@
 numpy
+scipy
 mujoco_py
 gym
+wandb
 matplotlib==3.4.3
-pytorch==1.10.2
+torch==1.10.2
+git+https://github.com/namsan96/torch_truncnorm@main#torch_truncnorm
 
