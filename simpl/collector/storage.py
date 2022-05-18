@@ -118,6 +118,7 @@ class Buffer:
         return f'Buffer(max_size={self.max_size}, self.size={self.size})'
 
     def to(self, device):
+        self.transitions = self.transitions.to(device)
         self.device = device
         return self
 
