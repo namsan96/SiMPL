@@ -44,7 +44,7 @@ class SAC(ToDeviceMixin, nn.Module):
         self.policy.to(device)
         return super().to(device)
 
-    def step(self, batch_size):
+    def step(self, batch_size, update_policy=True):
         stat = {}
         batch = self.buffer.sample(batch_size).to(self.device)
 
@@ -65,6 +65,9 @@ class SAC(ToDeviceMixin, nn.Module):
         self.update_target_qfs()
         
         stat['qf_loss'] = torch.stack(qf_losses).mean() / len(self.qfs)
+
+        if update_policy is False:
+            return stat
 
         # policy
         dists = self.policy.dist(batch.states)
