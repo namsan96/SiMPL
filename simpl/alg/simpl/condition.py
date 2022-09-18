@@ -11,6 +11,10 @@ class ConditionedPolicy(StochasticNNPolicy):
         super().__init__()
         self.policy = copy.deepcopy(policy)
         self.z = z
+    
+    @property
+    def action_dim(self):
+        return self.policy.action_dim
 
     def dist(self, batch_state):
         batch_z = torch.tensor(self.z, device=self.policy.device)[None, :].expand(len(batch_state), -1)
