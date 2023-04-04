@@ -11,10 +11,15 @@ def load_goals(file_name):
 
 
 size20_init_loc = [10, 10]
+
 flat_40t_train_goals = load_goals('flat_40t_train_goals')
 flat_20t_train_goals = load_goals('flat_20t_train_goals')
 flat_10t_train_goals = load_goals('flat_10t_train_goals')
 flat_test_goals = load_goals('flat_test_goals')
+
+narrow_train_goals = load_goals('narrow_train_goals')
+narrow_top_test_goals = load_goals('narrow_top_test_goals')
+narrow_bottom_test_goals = load_goals('narrow_bottom_test_goals')
 
 
 class Size20Seed0Tasks:
@@ -33,4 +38,17 @@ class Size20Seed0Tasks:
     flat_test_tasks = [
         MazeTask(size20_init_loc, goal_loc)
         for goal_loc in flat_test_goals
+    ]
+    
+    narrow_train_goals = [
+        MazeTask(size20_init_loc, goal_loc)
+        for goal_loc in narrow_train_goals
+    ]
+    narrow_top_test_goals = [
+        MazeTask(size20_init_loc, goal_loc)
+        for goal_loc in narrow_top_test_goals
+    ]
+    narrow_bottom_test_goals = [
+        MazeTask(size20_init_loc, goal_loc)
+        for goal_loc in narrow_bottom_test_goals
     ]
